@@ -1,6 +1,6 @@
 # svgl Changelog
 
-## [Add shadcn/ui Registry Features] - {PR_MERGE_DATE}
+## [Add shadcn/ui Registry Features] - 2025-09-29
 
 - Add the action `Copy shadcn/ui Registry Install Command` to copy the install command to the clipboard.
 - Add the command `Setup shadcn/ui Registry` to copy the `svgl` registry JSON to the clipboard and open docs.
