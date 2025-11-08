@@ -81,6 +81,6 @@ export default async function ({ path, oldText, newText, replaceAll = false }: I
   return {
     success: true,
     message: `Successfully applied edit to ${path}`,
-    replacedOccurrences: replaceAll ? content.split(oldText).length - 1 : 1,
+    replacedOccurrences: replaceAll ? (content.split(oldText).length -1) : 1,
   };
 }
