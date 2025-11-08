@@ -37,11 +37,7 @@ export default function Command() {
         }}
         actions={
           <ActionPanel>
-            <Action
-              icon={Icon.Gear}
-              title="Open Extension Preferences"
-              onAction={openExtensionPreferences}
-            />
+            <Action icon={Icon.Gear} title="Open Extension Preferences" onAction={openExtensionPreferences} />
             <Action.OpenInBrowser
               icon={Icon.QuestionMark}
               title="View Setup Guide"
