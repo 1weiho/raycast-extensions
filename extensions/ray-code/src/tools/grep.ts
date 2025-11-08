@@ -17,5 +17,5 @@ export default async function ({ path, query }: Input) {
   const content = await readFile(filePath, "utf8");
   const matches = content.match(new RegExp(query, "g"));
 
-  return matches;
+  return matches || [];
 }
