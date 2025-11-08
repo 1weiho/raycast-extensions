@@ -37,10 +37,10 @@ export default function Command() {
         }}
         actions={
           <ActionPanel>
-            <Action.Open
+            <Action
               icon={Icon.Gear}
               title="Open Extension Preferences"
-              target="raycast://extensions/raycast/raycast/manage-extensions"
+              onAction={openExtensionPreferences}
             />
             <Action.OpenInBrowser
               icon={Icon.QuestionMark}
