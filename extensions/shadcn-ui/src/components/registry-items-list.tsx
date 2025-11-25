@@ -12,6 +12,7 @@ interface RegistryDetail {
 interface RegistryItem {
   name: string;
   type: string;
+  title?: string;
   description?: string;
   dependencies?: string[];
   registryDependencies?: string[];
@@ -104,10 +105,12 @@ function RegistryItemListItem({ item, registry }: { item: RegistryItem; registry
 
   return (
     <List.Item
-      title={item.name}
+      title={item.title || item.name}
       detail={
         <List.Item.Detail
-          markdown={item.description ? `# ${item.name}\n\n${item.description}` : `# ${item.name}`}
+          markdown={
+            item.description ? `# ${item.title || item.name}\n\n${item.description}` : `# ${item.title || item.name}`
+          }
           metadata={
             hasMetadata && (
               <List.Item.Detail.Metadata>
