@@ -75,7 +75,13 @@ export default function MenuBarDeployments() {
         <MenuBarExtra.Item
           title="Open in Raycast"
           shortcut={{ modifiers: ["cmd"], key: "o" }}
-          onAction={() => launchCommand({ name: "search-deployments", type: LaunchType.UserInitiated })}
+          onAction={async () => {
+            try {
+              await launchCommand({ name: "search-deployments", type: LaunchType.UserInitiated });
+            } catch {
+              // command not found
+            }
+          }}
         />
       </MenuBarExtra.Section>
     </MenuBarExtra>
